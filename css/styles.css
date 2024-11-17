@@ -38,6 +38,8 @@ img {
 /* #region header */
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 .header-logo {
   padding: 24px 0;
@@ -90,6 +92,7 @@ img {
   bottom: -1px;
   left: 0;
   display: block;
+  color: #404bbf;
   background-color: #404bbf;
   height: 4px;
   width: 100%;
@@ -127,11 +130,11 @@ img {
 .hero {
   max-width: 1440px;
   background-image: linear-gradient(
-      to top,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/bgrnd01.jpg);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 188px 0;
@@ -306,6 +309,9 @@ img {
 }
 .portfolio-item {
   width: 360px;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-list-description {
   width: 100%;
@@ -317,10 +323,8 @@ img {
 .portfolio-wrapper {
   position: relative;
   overflow: hidden;
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .overlay {
   position: absolute;
   display: flex;
@@ -379,6 +383,7 @@ img {
 }
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 .footer-discription {
   margin-right: 120px;
@@ -389,17 +394,31 @@ img {
   margin-left: 16px;
   margin-right: 16px;
   gap: 24px;
+  justify-content: center;
 }
 .socials-item {
+  width: 40px;
+  height: 40px;
+}
+.socials-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   background-color: #4d5ae5;
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials-icon {
-  fill: #ffffff;
+  fill: #f4f4fd;
+}
+.socials-link:hover {
+  background-color: #404bbf;
+}
+.footer-socials .socials-link:hover {
+  background-color: #31d0aa;
 }
 /* #endregion */
