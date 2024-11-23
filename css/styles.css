@@ -81,10 +81,13 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #404bbf;
+  color: #2e2f42;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-link.active {
+  color: #404bbf;
 }
 .nav-link.active::after {
   content: '';
@@ -327,7 +330,6 @@ img {
 .overlay {
   position: absolute;
   display: flex;
-  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
